@@ -1,3 +1,22 @@
+"""
+Comparison between SMTP and ESMTP:
+
+SMTP (Simple Mail Transfer Protocol):
+- Traditional protocol for sending emails on the Internet.
+- Lacks built-in mechanisms for secure transmission of data.
+- Does not support modern email features and enhancements natively.
+- Uses standard port 25 for unencrypted transmission.
+- Emails need to be ASCII encoded due to inability to handle binary data natively.
+
+ESMTP (Extended Simple Mail Transfer Protocol):
+- An extension of SMTP with added features and capabilities.
+- Can negotiate encryption using STARTTLS for secure email transmission.
+- Allows for protocol extensions without altering the core protocol (e.g., authentication, enhanced status codes).
+- Uses standard port 465 for encrypted transmission using SSL.
+- During an ESMTP session, the server indicates its supported extensions.
+
+"""
+
 import ssl
 import socket
 import base64
